@@ -1,48 +1,49 @@
-// ProductDetails.mjs
-// ProductDetails.mjs
+// Sample product data
 const products = [
   {
-    name: "Marmot Ajax Tent 3-Person 3-Season",
-    image: "../../images/marmot-ajax.webp",
-    description: "Lightweight 3-person tent for 3-season camping.",
+    name: "Marmot Ajax Tent",
+    description: "3-person, 3-season tent in Pale Pumpkin",
     price: "$299",
-    alt: "Marmot Ajax 3-Person Tent in Pale Pumpkin"
+    image: "/images/marmot-ajax-tent-3-person-3-season.webp"
   },
   {
-    name: "Cedar Ridge Rimrock Tent 2-Person 3-Season",
-    image: "../../images/cedar-ridge.webp",
-    description: "Compact tent for 2-person, 3-season camping.",
+    name: "Cedar Ridge Rimrock Tent",
+    description: "2-person, 3-season tent in Rust",
     price: "$199",
-    alt: "Cedar Ridge Rimrock 2-Person Tent in Rust"
+    image: "/images/cedar-ridge-rimrock-tent-2-person-3-season.webp"
   },
   {
-    name: "The North Face Talus Tent 4-Person 3-Season",
-    image: "../../images/north-face-talus.webp",
-    description: "Spacious 4-person tent for 3-season adventures.",
+    name: "The North Face Talus Tent",
+    description: "4-person, 3-season tent in Gold",
+    price: "$349",
+    image: "/images/the-north-face-talus-tent-4-person-3-season.webp"
+  },
+  {
+    name: "The North Face Alpine Guide Tent",
+    description: "3-person, 4-season tent in Grey",
     price: "$399",
-    alt: "North Face Talus 4-Person Tent in Golden"
-  },
-  {
-    name: "The North Face Alpine Guide Tent 3-Person 4-Season",
-    image: "../../images/north-face-alpine.webp",
-    description: "Durable 3-person tent for 4-season mountain conditions.",
-    price: "$499",
-    alt: "North Face Alpine Guide 3-Person 4-Season Tent"
+    image: "/images/the-north-face-alpine-guide-tent-3-person-4-season.webp"
   }
 ];
 
-const container = document.getElementById("product-container");
+// Function to render products
+function renderProducts() {
+  const productList = document.getElementById("product-list");
+  products.forEach(product => {
+    const productCard = document.createElement("div");
+    productCard.className = "product-card";
 
-products.forEach(product => {
-  const productDiv = document.createElement("div");
-  productDiv.classList.add("product");
+    productCard.innerHTML = `
+      <img src="${product.image}" alt="${product.description}" width="230">
+      <h2>${product.name}</h2>
+      <p>${product.description}</p>
+      <p class="price">${product.price}</p>
+      <button aria-label="Add ${product.name} to cart">Add to Cart</button>
+    `;
+    
+    productList.appendChild(productCard);
+  });
+}
 
-  productDiv.innerHTML = `
-    <h2>${product.name}</h2>
-    <img src="${product.image}" alt="${product.alt}" width="230" height="230">
-    <p>${product.description}</p>
-    <p class="price">${product.price}</p>
-  `;
-
-  container.appendChild(productDiv);
-});
+// Initialize
+renderProducts();
