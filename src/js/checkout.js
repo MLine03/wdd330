@@ -1,7 +1,6 @@
-// cart.js
+// checkout.js
 import { loadHeaderFooter } from '../js/utils.mjs';
 
 loadHeaderFooter();
 
-// Add your cart rendering logic here
-
+// Checkout-specific logic can go here
