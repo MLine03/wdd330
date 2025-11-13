@@ -1,21 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SleepOutside | Home</title>
-  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
   <header id="main-header"></header>
 
   <main>
-    <h1>Welcome to SleepOutside</h1>
-    <p>Find your perfect outdoor gear!</p>
+    <section class="hero">
+      <h1>Welcome to SleepOutside!</h1>
+    </section>
+
+    <section class="categories">
+      <h2>Shop by Category</h2>
+      <div class="category-grid">
+        <a href="./product_listing/index.html?category=tents" class="category">
+          <img src="./images/tent.svg" alt="Tents" />
+          <h3>Tents</h3>
+        </a>
+        <a href="./product_listing/index.html?category=backpacks" class="category">
+          <img src="./images/backpack.svg" alt="Backpacks" />
+          <h3>Backpacks</h3>
+        </a>
+        <a href="./product_listing/index.html?category=sleeping-bags" class="category">
+          <img src="./images/sleeping-bag.svg" alt="Sleeping Bags" />
+          <h3>Sleeping Bags</h3>
+        </a>
+        <a href="./product_listing/index.html?category=hammocks" class="category">
+          <img src="./images/hammock.svg" alt="Hammocks" />
+          <h3>Hammocks</h3>
+        </a>
+      </div>
+    </section>
   </main>
 
   <footer id="main-footer"></footer>
-
-  <script type="module" src="./js/main.js"></script>
+  <script type="module" src="../js/main.js"></script>
 </body>
 </html>
+
