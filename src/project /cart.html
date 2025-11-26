@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Soda Bar - Cart</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Open+Sans&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>Soda Bar Ordering App</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="mix.html">Mix</a>
+      <a href="cart.html" class="active">Cart (<span id="cart-count">0</span>)</a>
+      <a href="confirmation.html">History</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="cart-container">
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+      <div id="cart-summary">
+        <p>Subtotal: $<span id="subtotal">0.00</span></p>
+        <p>Discounts: $<span id="discounts">0.00</span></p>
+        <p><strong>Total: $<span id="total">0.00</span></strong></p>
+      </div>
+      <button id="checkout-btn">Checkout</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contact us: soda@example.com | Follow us on social media!</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>
